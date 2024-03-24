@@ -7,7 +7,7 @@ export const router = createCheerioRouter();
 router.addDefaultHandler(async ({ enqueueLinks, log }) => {
     log.info(`enqueueing new URLs`);
     await enqueueLinks({
-        globs: [`${BASE_URL}/**`],
+        globs: [`${BASE_URL}/browse-**`],
         label: 'detail',
     });
 });
